@@ -7,7 +7,10 @@
 compute() {
   reward=${1:-50}
   block=${2:-0}
-  year=${3:-2008}
+  year=${3:-2009}
+  # get the real year from past.txt data
+  PAST=$(grep "^$block:" past.txt) \
+    && year=$(echo $PAST | cut -d: -f2 | cut -d- -f1)
 
   printf "%d %.8f %d\n" $block $reward $year
   test "$reward" = "0" && return 1
