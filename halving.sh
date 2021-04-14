@@ -7,7 +7,7 @@
 compute() {
   reward=${1:-50}
   block=${2:-0}
-  year=${3:-2009}
+  year=${3:-2008}
 
   printf "%d %.8f %d\n" $block $reward $year
   test "$reward" = "0" && return 1
