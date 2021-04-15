@@ -5,16 +5,16 @@
 #    which will occur approximately every 4 years.
 
 compute() {
-  reward=${1:-50}
-  block=${2:-0}
+  block=${1:-0}
+  reward=${2:-50.0}
   year=${3:-2009}
   # get the real year from past.txt data
   PAST=$(grep "^$block:" past.txt) \
     && year=$(echo $PAST | cut -d: -f2 | cut -d- -f1)
 
-  printf "%7d %.8f %d\n" $block $reward $year
+  printf '%7d %11.8f %d\n' $block $reward $year
   test "$reward" = "0" && return 1
-  compute $(echo "scale=8; $reward/2" | bc) $(($block+210000)) $(($year+4))
+  compute $(($block+210000)) $(echo "scale=8; $reward/2" | bc) $(($year+4))
 }
 
 compute
