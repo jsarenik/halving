@@ -8,10 +8,10 @@ per line:
 
 For example:
 
-    5670000 0.00000037 2117
+    5670000  0.00000037 2116
 
 Read it like this: From block `5670000` the reward will be `37` satoshi
-and it should happen approximately in year `2117`.
+and it should happen approximately in year `2116`.
 
 The `sum-coins.sh` and `sum-total.sh` scripts process the output of
 `halving.sh`.
