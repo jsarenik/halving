@@ -12,7 +12,7 @@ compute() {
   PAST=$(grep "^$block:" past.txt) \
     && year=$(echo $PAST | cut -d: -f2 | cut -d- -f1)
 
-  printf "%d %.8f %d\n" $block $reward $year
+  printf "%7d %.8f %d\n" $block $reward $year
   test "$reward" = "0" && return 1
   compute $(echo "scale=8; $reward/2" | bc) $(($block+210000)) $(($year+4))
 }
