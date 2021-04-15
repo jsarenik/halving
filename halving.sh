@@ -7,14 +7,16 @@
 compute() {
   block=${1:-0}
   reward=${2:-50.0}
-  year=${3:-2009}
-  # get the real year from past.txt data
+  date=${3}
+  # get the real yyyy-mm-dd from past.txt data
   PAST=$(grep "^$block:" past.txt) \
-    && year=$(echo $PAST | cut -d: -f2 | cut -d- -f1)
-
-  printf '%7d %11.8f %d\n' $block $reward $year
+    && date=${PAST#*:}
+  printf '%7d %11.8f %s\n' $block $reward ${date%%-*}
   test "$reward" = "0" && return 1
-  compute $(($block+210000)) $(echo "scale=8; $reward/2" | bc) $(($year+4))
+
+  time=$(date +%s -d "$date")
+  next=$(date +%Y-%m-%d -d "@$(($time+210000*10*60))")
+  compute $(($block+210000)) $(echo "scale=8; $reward/2" | bc) $next
 }
 
 compute
