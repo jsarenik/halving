@@ -13,7 +13,7 @@ compute() {
     && year=$(echo $PAST | cut -d: -f2 | cut -d- -f1)
 
   printf '%7d %11.8f %d\n' $block $reward $year
-  test "$reward" = "0" && return 1
+  test "$reward" = "0" && return 0
   compute $(($block+210000)) $(echo "scale=8; $reward/2" | bc) $(($year+4))
 }
 
