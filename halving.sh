@@ -10,11 +10,11 @@ compute() {
   year=${3:-2009}
   # get the real year from past.txt data
   PAST=$(grep "^$block:" past.txt) \
-    && year=$(echo $PAST | cut -d: -f2 | cut -d- -f1)
+    && { PAST=${PAST#*:}; year=${PAST%%-*}; }
 
   printf '%7d %11.8f %d\n' $block $reward $year
-  test "$reward" = "0" && return 0
-  compute $(($block+210000)) $(echo "scale=8; $reward/2" | bc) $(($year+4))
+  test "$reward" = "0" || \
+    compute $(($block+210000)) $(echo "scale=8; $reward/2" | bc) $(($year+4))
 }
 
 compute
