@@ -44,3 +44,10 @@ a new block. The low-fee transactions could be forgotten
 if mempool gets so big that even the user with the largest
 memory will reach their limit and start forgetting low-fee
 transactions.
+
+
+## Links
+
+ * https://amberdata.io/blog/why-the-bitcoin-supply-will-never-reach-21-million/
+ * https://finematics.com/bitcoin-halving-explained-code-analysis/
+ * https://bitcoinik.com/bitcoin-halving-code-explained/
