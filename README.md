@@ -28,10 +28,14 @@ One bitcoin is one hundred million satoshi.
 
 1 BTC = 100 000 000 sat
 
-Not a single satoshi will ever disappear. The transaction
+Not a single satoshi will ever disappear\*. The transaction
 fees are mined by the miners and recycled this way. When
 the reward will be 0, the miners will get _only_ the fees
 paid by Bitcoin users on the transactions.
+
+\* There is actually a theoretical possibility that the miner
+will not issue a coinbase transaction or will ask for less
+than what they could. But as far as I know no one did that.
 
 Transactions live in a pool (called `mempool` because it
 sits in the memory of every Bitcoin node) and the miners
