@@ -48,6 +48,8 @@ transactions.
 
 ## Links
 
+ * https://en.bitcoin.it/wiki/Controlled_supply
  * https://amberdata.io/blog/why-the-bitcoin-supply-will-never-reach-21-million/
  * https://finematics.com/bitcoin-halving-explained-code-analysis/
  * https://bitcoinik.com/bitcoin-halving-code-explained/
+ * [listedreserve article](https://www.listedreserve.com/education/transactions-and-the-bitcoin-money-supply/)
