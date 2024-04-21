@@ -36,6 +36,8 @@ paid by Bitcoin users on the transactions.
 \* There is actually a possibility that the miner
 will not issue a coinbase transaction or will ask for less
 than what they could (see first link in the end).
+And there is a possibility the coins are burned in
+a provable way using `OP_RETURN`.
 
 Transactions live in a pool (called `mempool` because it
 sits in the memory of every Bitcoin node) and the miners
@@ -49,7 +51,9 @@ transactions.
 ## Links
 
  * https://en.bitcoin.it/wiki/Controlled_supply
- * https://amberdata.io/blog/why-the-bitcoin-supply-will-never-reach-21-million/
+ * https://blog.amberdata.io/why-the-bitcoin-supply-will-never-reach-21-million
+ * https://medium.com/amberdata/why-the-bitcoin-supply-will-never-reach-21-million-7263e322de1
+ * https://www.makeuseof.com/bitcoin-remove-21-million-coin-limit/
  * https://finematics.com/bitcoin-halving-explained-code-analysis/
  * https://bitcoinik.com/bitcoin-halving-code-explained/
  * [listedreserve article](https://www.listedreserve.com/education/transactions-and-the-bitcoin-money-supply/)
