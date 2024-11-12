@@ -39,14 +39,6 @@ than what they could (see first link in the end).
 And there is a possibility the coins are burned in
 a provable way using `OP_RETURN`.
 
-Transactions live in a pool (called `mempool` because it
-sits in the memory of every Bitcoin node) and the miners
-choose the highest-fee transactions when they are mining
-a new block. The low-fee transactions could be forgotten
-if mempool gets so big that even the user with the largest
-memory will reach their limit and start forgetting low-fee
-transactions.
-
 
 ## Links
 
