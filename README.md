@@ -4,22 +4,22 @@ The POSIX shell script `halving.sh` contains all the logic
 needed to compute Bitcoin halving data in following format
 per line:
 
-    <block> <reward> <year>
+    <block> <subsidy> <year>
 
 For example:
 
-    5670000  0.00000037 2116
+    5670000         37 2116
 
-Read it like this: From block `5670000` the reward will be `37` satoshi
+Read it like this: From block `5670000` the subsidy will be `37` satoshi
 and it should happen approximately in year `2116`.
 
-The `sum-coins.sh` and `sum-total.sh` scripts process the output of
+The `sum-sats.sh` and `sum-total.sh` scripts process the output of
 `halving.sh`.
 
 Examples:
 
-    $ ./sum-coins.sh 
-    20999999.97690000
+    $ ./sum-sats.sh
+    2099999997690000
     $ ./sum-total.sh 
     99.99999989%
 
@@ -30,8 +30,8 @@ One bitcoin is one hundred million satoshi.
 
 Not a single satoshi will ever disappear\*. The transaction
 fees are mined by the miners and recycled this way. When
-the reward will be 0, the miners will get _only_ the fees
-paid by Bitcoin users on the transactions.
+the subsidy will be 0, the miners will get _only_ the fees
+paid by Bitcoin users in the transactions (a.k.a. reward).
 
 \* There is actually a possibility that the miner
 will not issue a coinbase transaction or will ask for less

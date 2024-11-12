@@ -6,15 +6,15 @@
 
 compute() {
   block=${1:-0}
-  reward=${2:-50.0}
+  subsidy=${2:-5000000000}
   year=${3:-2009}
   # get the real year from past.txt data
   PAST=$(grep "^$block:" past.txt) \
     && { PAST=${PAST#*:}; year=${PAST%%-*}; }
 
-  printf '%7d %11.8f %d\n' $block $reward $year
-  test "$reward" = "0" || \
-    compute $(($block+210000)) $(echo "scale=8; $reward/2" | bc) $(($year+4))
+  printf '%7d %10d %d\n' $block $subsidy $year
+  test "$subsidy" = "0" || \
+    compute $(($block+210000)) $(($subsidy/2)) $(($year+4))
 }
 
 compute

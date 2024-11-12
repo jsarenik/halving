@@ -1,11 +1,3 @@
 #!/bin/sh
 
-{
-  printf "scale=8; a=0"
-  sh halving.sh | awk '{print $2}' \
-    | while read reward
-      do
-        printf "+%.8f" $reward
-      done
-  echo "; print a, \"%\\\n\""
-} | bc
+echo $(( $(sh sum-sats.sh)/21 )) | sed 's/0\+$//;s/^\(..\)\(.*\)/\1.\2%/'
