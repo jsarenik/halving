@@ -14,7 +14,7 @@ compute() {
 
   printf '%7d %10d %d\n' $block $subsidy $year
   test "$subsidy" = "0" || \
-    compute $(($block+210000)) $(($subsidy/2)) $(($year+4))
+    compute $(($block+210000)) $(($subsidy>>1)) $(($year+4))
 }
 
 compute
