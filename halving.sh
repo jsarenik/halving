@@ -3,7 +3,8 @@
 # from bitcoin/src/validation.cpp:
 # // Subsidy is cut in half every 210,000 blocks
 #    which will occur approximately every 4 years.
-four=$(./shack.sh) # avg generated from past.txt by shack.sh
+four=${1:-$(./shack.sh 2>/dev/null)}
+four=${four:-122866255} # avg generated from past.txt by shack.sh
 #four=126000000 # upper limit 600s avg blocks
 #four=$(./shack-full.sh)
 

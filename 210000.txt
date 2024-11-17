@@ -1,0 +1,16 @@
+One can see years which are simply adding 4 for every halving
+at
+ https://www.ccn.com/wp-content/uploads/2023/10/cypherpunk-cogitations-bitcoin-inflation-vs-time.webp
+ https://bitcoinblockhalf.com/images/bitcoin-inflation-chart.png
+
+Use seq to get such a poor prediction:
+
+$ seq 2009 4 2037
+2009
+2013
+2017
+2021
+2025
+2029
+2033
+2037
