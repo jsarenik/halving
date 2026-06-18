@@ -50,3 +50,4 @@ a provable way using `OP_RETURN`.
  * https://bitcoinik.com/bitcoin-halving-code-explained/
  * [listedreserve article](https://www.listedreserve.com/education/transactions-and-the-bitcoin-money-supply/)
  * https://savingsatoshi.com/
+ * https://www.youtube.com/watch?v=NvE5uUm6Jzc
